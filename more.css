@@ -1,0 +1,1549 @@
+*{
+    box-sizing: 0px;
+    margin: 0px;
+    padding: 0px;
+  }
+  #container{
+    height: 159.9mm;
+    width: 76.7mm;
+    border: 2px solid black;
+    /* border-radius: 20px; */
+    position: relative;
+  }
+  #navimg{
+  color: white;
+  font-size: 22px;
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: nowrap; */
+
+  }
+  
+  .profile{
+    color: white;
+    float: right;
+    margin: 20px;
+  }
+  .profile::before{
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 5px;
+  }
+  :root {
+    --primary-color: #00BA8C;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: var(--clr);
+  }
+  
+  #container {
+    width: 100%;
+    max-width: 400px;
+  }
+  #upperbg {
+    background: #00BA8C;
+    padding: 20px;
+    overflow: auto;
+    scrollbar-width: none;
+  }
+  
+  #navimg {
+    width: 100px;
+    height: auto;
+  }
+  
+  .navigation {
+    width: 100%;
+    height: 70px;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+  }
+  
+  .navigation ul {
+    display: flex;
+    width: 100%;
+    max-width: 350px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .navigation ul li {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+  }
+  
+  .navigation ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    color: var(--clr);
+    text-decoration: none;
+  }
+  
+  .navigation ul li a .icon {
+    display: block;
+    line-height: 75px;
+    font-size: 1.5rem;
+    transition: 0.5s;
+    color: var(--clr);
+  }
+  
+  .navigation ul li.active a .icon {
+    transform: translateY(-32px);
+  }
+  
+  .navigation ul li a .text {
+    position: absolute;
+    color: var(--clr);
+    font-weight: 400;
+    font-size: 0.75em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  .navigation ul li.active a .text {
+    transform: translateY(10px);
+    opacity: 1;
+  }
+  .indicator {
+    position: absolute;
+    top: -50%;
+    width: 70px;
+    height: 70px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    border: 6px solid var(--clr);
+    transition: 0.5s;
+    z-index: 0;
+  }
+  .indicator::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -22px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-right-radius: 20px;
+    box-shadow: 1px -10px 0 0 var(--clr);
+  }
+  .indicator::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -22px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-left-radius: 20px;
+    box-shadow: -1px -10px 0 0 var(--clr);
+  }
+  .navigation ul li:nth-child(1).active ~ .indicator {
+    transform: translateX(calc(70px * 0));
+  }
+  
+  .navigation ul li:nth-child(2).active ~ .indicator {
+    transform: translateX(calc(70px * 1));
+  }
+  
+  .navigation ul li:nth-child(3).active ~ .indicator {
+    transform: translateX(calc(70px * 2));
+  }
+  
+  .navigation ul li:nth-child(4).active ~ .indicator {
+    transform: translateX(calc(70px * 3));
+  }
+  
+  .navigation ul li:nth-child(5).active ~ .indicator {
+    transform: translateX(calc(70px * 4));
+  }
+  #footer {
+    height: 8%;
+    width: 100%;
+    background-color: var(--primary-color);
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+  }
+  #navfoot {
+    color: red;
+    font-size: 1rem;
+    text-align: center;
+  }
+  #subContainer{
+    border: 2px solid orange;
+    height: 76.5%;
+    overflow: scroll;
+    padding: 10px;
+    scrollbar-width: none;
+  }
+  #subContainer > div {
+    margin: 5px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+    border: 1px solid #ddd;
+}
+
+/* #subContainer > div:hover {
+    background-color: #00ba8c;
+    color: white;
+} */
+
+.menu-item {
+  display: flex; 
+  align-items: center; 
+  padding: 10px;
+  background-color: #f1f1f1; 
+  border-radius: 5px; 
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: 1px solid #ddd; 
+}
+
+.menu-item i {
+  margin-right: 10px; 
+  font-size: 20px; 
+}
+
+.menu-item span {
+  font-size: 16px; 
+}
+
+.menu-item:hover {
+  background-color: #00ba8c; 
+  color: white; 
+}
+#navele{
+  text-decoration: none;
+  color: white;
+}
+
+#subContainer .menu-item {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+#subContainer #date {
+  font-size: 16px;
+  color: #555;
+}
+
+#subContainer #wrapele {
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+}
+
+#subContainer #wrapele2 {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Style for input */
+#inp {
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+/* Container for teams with imageId */
+.teamContainerWithImage {
+  display: flex; /* Display image and name side by side */
+  border-radius: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+/* Container for teams without imageId */
+.teamContainerWithoutImage {
+  text-align: left; /* Align text to the left */
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  background-color: #91e5e8;
+}
+
+/* Team image styling */
+.teamImage {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 50%; /* Circular image */
+  object-fit: cover; /* Ensure image isn't distorted */
+}
+
+/* Team name styling */
+.teamName {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+
+}
+
+/* Category title styling */
+.categoryTitle {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+/* Grid layout for teams */
+.teamGrid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 15px;
+}
+/* General Table Container Styling */
+.bowlingTable {
+  width: 92%;
+  max-width: 700px;
+  border: 1px solid #f4d2d2;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+.searchInput {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+}
+
+/* Category Header */
+#category {
+  /* text-align: center; */
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #444;
+  text-transform: uppercase;
+}
+
+/* Player Row Styling */
+.playerRow {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  /* margin: 10px; */
+  border-bottom: 1px solid #ddd;
+}
+
+.playerRow:last-child {
+  border-bottom: none;
+}
+
+/* Player Image */
+.playerImage {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  object-fit: cover;
+  margin-right: 15px; /* Space between image and text */
+}
+
+/* Player Info (Name and Team) */
+.playerInfo {
+  display: flex;
+  flex-direction: column; /* Stack name and team vertically */
+  justify-content: center;
+}
+
+/* Player Name Styling */
+.playerName {
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 5px; /* Space between name and team */
+}
+
+/* Player Team Styling */
+.playerTeam {
+  font-size: 12px;
+  color: #777;
+}
+.match-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.match-info {
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #555;
+}
+
+.team-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  border-radius: 20px;
+}
+
+.team-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.team-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.match-time {
+  font-size: 14px;
+  text-align: right;
+  font-weight: bold;
+  color: #007bff;
+}
+#headerRow {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: #f4f4f4;
+  border-bottom: 2px solid #ddd;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+#headerRow p {
+  margin: 0;
+  flex: 1;
+  text-align: center;
+  color: #333;
+}
+
+#headerRow #rankHeader {
+  text-align: left; 
+}
+
+#headerRow #pointsHeader {
+  text-align: right; 
+}
+
+#rankElement {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  gap: 15px;
+}
+
+#rankElement p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+#rankElement #rank {
+  flex: 0.5;
+  text-align: left;
+}
+
+#rankElement #rankImage {
+  flex: 1;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#rankElement #con {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+#rankElement #name {
+  font-weight: bold;
+}
+
+#rankElement #country {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+#rankElement #points {
+  flex: 1;
+  text-align: right;
+  font-weight: bold;
+  color: #00BA8C;
+}
+#recs{
+  margin-left:10px;
+  padding: 10px;
+  position:relative;
+  top: 12px;
+  border-radius: 20px;
+}
+#navele {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+#navele a {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 16px;
+}
+
+#navele a:hover {
+  text-decoration: underline;
+}
+
+/* Input Styles */
+#inp {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/* Date and Series Wrappers */
+#date {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.wrap {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  background-color: #f9f9f9;
+}
+
+.wrap:hover {
+  background-color: #e6f7ff;
+}
+
+.wrapele {
+  font-size: 16px;
+  font-weight: bold;
+  white-space: nowrap; /* Ensure text stays in a single line */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.wrapele2 {
+  font-size: 14px;
+  color: #555;
+}
+/* Match Container */
+.match-container {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.match-container h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+
+}
+#matchSeries{
+  overflow: scroll;
+}
+.team-container {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+#navname{
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-decoration: none;
+  }
+.team-container img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+#navele>a{
+  color: white;
+  position: relative;
+  top: 20px;
+  background-color: #3b4d5b;
+  border-radius: 20px;
+  padding: 10px;
+
+}
+.nav{
+  text-decoration: none;
+  color: white;
+  font-size: 0.9em;
+}
+.status {
+  color: green;
+}
+#heading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  text-align: center;
+}
+#squadType {
+  font-size: 1.2rem;
+  color: #34495e;
+  margin: 10px 0;
+  padding: 5px 15px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+#stats-heading {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+#stats-heading:hover{
+  background-color: gray;;
+}
+.venue-container {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Image styling */
+.venue-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  margin-right: 15px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+}
+
+/* Venue details styling */
+.venue-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Venue name (ground and city) */
+[id^="venue-name-"] {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+/* Venue country */
+[id^="venue-country-"] {
+  font-size: 1rem;
+  color: #34495e;
+}
+/* Container for each news story */
+.news-container {
+  display: flex;
+  align-items: flex-start;
+  margin: 15px 0;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.news-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  margin-right: 15px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+}
+
+/* News details styling */
+.news-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* News headline styling */
+[id^="news-headline-"] {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+/* News intro styling */
+[id^="news-intro-"] {
+  font-size: 0.8rem;
+  color: #34495e;
+  line-height: 1.5;
+}
+#loading-message {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 20px auto;
+  width: fit-content;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (width<576px){
+    *{
+        box-sizing: 0px;
+        margin: 0px;
+        padding: 0px;
+      }
+      #container{
+        height: 159.9mm;
+        width: 76.7mm;
+        border: 2px solid black;
+        /* border-radius: 20px; */
+        position: relative;
+      }
+      #navimg{
+      color: white;
+      font-size: 22px;
+      width: 200px;
+      display: flex;
+      flex-direction: row;
+      /* flex-wrap: nowrap; */
+    
+      }
+      
+      .profile{
+        color: white;
+        float: right;
+        margin: 20px;
+      }
+      .profile::before{
+        border: 2px solid white;
+        border-radius: 50%;
+        padding: 5px;
+      }
+      :root {
+        --primary-color: #00BA8C;
+      }
+      
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background: var(--clr);
+      }
+      
+      #container {
+        width: 86%;
+        max-width: 400px;
+      }
+      #upperbg {
+        background: #00BA8C;
+        padding: 20px;
+        overflow: auto;
+        scrollbar-width: none;
+      }
+      
+      #navimg {
+        width: 100px;
+        height: auto;
+      }
+      
+      .navigation {
+        width: 100%;
+        height: 70px;
+        background-color: #4158D0;
+        background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+      }
+      
+      .navigation ul {
+        display: flex;
+        width: 100%;
+        max-width: 350px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+      
+      .navigation ul li {
+        position: relative;
+        width: 70px;
+        height: 70px;
+        z-index: 1;
+      }
+      
+      .navigation ul li a {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        font-weight: 500;
+        color: var(--clr);
+        text-decoration: none;
+      }
+      
+      .navigation ul li a .icon {
+        display: block;
+        line-height: 75px;
+        font-size: 1.5rem;
+        transition: 0.5s;
+        color: var(--clr);
+      }
+      
+      .navigation ul li.active a .icon {
+        transform: translateY(-32px);
+      }
+      
+      .navigation ul li a .text {
+        position: absolute;
+        color: var(--clr);
+        font-weight: 400;
+        font-size: 0.75em;
+        letter-spacing: 0.05em;
+        transition: 0.5s;
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      
+      .navigation ul li.active a .text {
+        transform: translateY(10px);
+        opacity: 1;
+      }
+      .indicator {
+        position: absolute;
+        top: -50%;
+        width: 70px;
+        height: 70px;
+        background: var(--primary-color);
+        border-radius: 50%;
+        border: 6px solid var(--clr);
+        transition: 0.5s;
+        z-index: 0;
+      }
+      .indicator::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -22px;
+        width: 20px;
+        height: 20px;
+        background: transparent;
+        border-top-right-radius: 20px;
+        box-shadow: 1px -10px 0 0 var(--clr);
+      }
+      .indicator::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: -22px;
+        width: 20px;
+        height: 20px;
+        background: transparent;
+        border-top-left-radius: 20px;
+        box-shadow: -1px -10px 0 0 var(--clr);
+      }
+      .navigation ul li:nth-child(1).active ~ .indicator {
+        transform: translateX(calc(70px * 0));
+      }
+      
+      .navigation ul li:nth-child(2).active ~ .indicator {
+        transform: translateX(calc(70px * 1));
+      }
+      
+      .navigation ul li:nth-child(3).active ~ .indicator {
+        transform: translateX(calc(70px * 2));
+      }
+      
+      .navigation ul li:nth-child(4).active ~ .indicator {
+        transform: translateX(calc(70px * 3));
+      }
+      
+      .navigation ul li:nth-child(5).active ~ .indicator {
+        transform: translateX(calc(70px * 4));
+      }
+      #footer {
+        height: 8%;
+        width: 100%;
+        background-color: var(--primary-color);
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0;
+      }
+      #navfoot {
+        color: red;
+        font-size: 1rem;
+        text-align: center;
+      }
+      #subContainer{
+        border: 2px solid orange;
+        height: 76.5%;
+        overflow: scroll;
+        padding: 10px;
+        scrollbar-width: none;
+      }
+      #subContainer > div {
+        margin: 5px;
+        padding: 10px;
+        background-color: #f1f1f1;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 20px;
+        transition: background-color 0.3s ease;
+        border: 1px solid #ddd;
+    }
+    
+    /* #subContainer > div:hover {
+        background-color: #00ba8c;
+        color: white;
+    } */
+    
+    .menu-item {
+      display: flex; 
+      align-items: center; 
+      padding: 10px;
+      background-color: #f1f1f1; 
+      border-radius: 5px; 
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      border: 1px solid #ddd; 
+    }
+    
+    .menu-item i {
+      margin-right: 10px; 
+      font-size: 20px; 
+    }
+    
+    .menu-item span {
+      font-size: 16px; 
+    }
+    
+    .menu-item:hover {
+      background-color: #00ba8c; 
+      color: white; 
+    }
+    #navele{
+      text-decoration: none;
+      color: white;
+    }
+    
+    #subContainer .menu-item {
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+    
+    #subContainer #date {
+      font-size: 16px;
+      color: #555;
+    }
+    
+    #subContainer #wrapele {
+      font-size: 18px;
+      color: #333;
+      font-weight: bold;
+    }
+    
+    #subContainer #wrapele2 {
+      font-size: 14px;
+      color: #777;
+    }
+    
+    /* Style for input */
+    #inp {
+      width: 100%;
+      padding: 8px;
+      margin: 10px 0;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    /* Container for teams with imageId */
+    .teamContainerWithImage {
+      display: flex; /* Display image and name side by side */
+      border-radius: 20px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      background-color: #f9f9f9;
+    }
+    
+    /* Container for teams without imageId */
+    .teamContainerWithoutImage {
+      text-align: left; /* Align text to the left */
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 20px;
+      border: 1px solid #ddd;
+      background-color: #91e5e8;
+    }
+    
+    /* Team image styling */
+    .teamImage {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+      border-radius: 50%; /* Circular image */
+      object-fit: cover; /* Ensure image isn't distorted */
+    }
+    
+    /* Team name styling */
+    .teamName {
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+    
+    }
+    
+    /* Category title styling */
+    .categoryTitle {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      color: #444;
+    }
+    
+    /* Grid layout for teams */
+    .teamGrid {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 15px;
+    }
+    /* General Table Container Styling */
+    .bowlingTable {
+      width: 92%;
+      max-width: 700px;
+      border: 1px solid #f4d2d2;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      padding: 10px;
+      background-color: #f9f9f9;
+    }
+    .searchInput {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      background-color: #f9f9f9;
+      box-sizing: border-box;
+    }
+    
+    /* Category Header */
+    #category {
+      /* text-align: center; */
+      font-size: 15px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #444;
+      text-transform: uppercase;
+    }
+    
+    /* Player Row Styling */
+    .playerRow {
+      display: flex;
+      align-items: center;
+      padding: 10px 15px;
+      /* margin: 10px; */
+      border-bottom: 1px solid #ddd;
+    }
+    
+    .playerRow:last-child {
+      border-bottom: none;
+    }
+    
+    /* Player Image */
+    .playerImage {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 2px solid #ddd;
+      object-fit: cover;
+      margin-right: 15px; /* Space between image and text */
+    }
+    
+    /* Player Info (Name and Team) */
+    .playerInfo {
+      display: flex;
+      flex-direction: column; /* Stack name and team vertically */
+      justify-content: center;
+    }
+    
+    /* Player Name Styling */
+    .playerName {
+      font-size: 14px;
+      color: #333;
+      font-weight: bold;
+      margin-bottom: 5px; /* Space between name and team */
+    }
+    
+    /* Player Team Styling */
+    .playerTeam {
+      font-size: 12px;
+      color: #777;
+    }
+    .match-container {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px 0;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+    }
+    
+    .match-info {
+      font-size: 14px;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #555;
+    }
+    
+    .team-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      border-radius: 20px;
+    }
+    
+    .team-logo {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+    
+    .team-name {
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+    }
+    
+    .match-time {
+      font-size: 14px;
+      text-align: right;
+      font-weight: bold;
+      color: #007bff;
+    }
+    #headerRow {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      background-color: #f4f4f4;
+      border-bottom: 2px solid #ddd;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+    
+    #headerRow p {
+      margin: 0;
+      flex: 1;
+      text-align: center;
+      color: #333;
+    }
+    
+    #headerRow #rankHeader {
+      text-align: left; 
+    }
+    
+    #headerRow #pointsHeader {
+      text-align: right; 
+    }
+    
+    #rankElement {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      gap: 15px;
+    }
+    
+    #rankElement p {
+      margin: 0;
+      font-size: 1rem;
+    }
+    
+    #rankElement #rank {
+      flex: 0.5;
+      text-align: left;
+    }
+    
+    #rankElement #rankImage {
+      flex: 1;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    
+    #rankElement #con {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 5px;
+    }
+    
+    #rankElement #name {
+      font-weight: bold;
+    }
+    
+    #rankElement #country {
+      color: #555;
+      font-size: 0.9rem;
+    }
+    
+    #rankElement #points {
+      flex: 1;
+      text-align: right;
+      font-weight: bold;
+      color: #00BA8C;
+    }
+    #recs{
+      margin-left:10px;
+      padding: 10px;
+      position:relative;
+      top: 12px;
+      border-radius: 20px;
+    }
+    #navele {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    
+    #navele a {
+      text-decoration: none;
+      color: #007bff;
+      font-size: 16px;
+    }
+    
+    #navele a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Input Styles */
+    #inp {
+      padding: 10px;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+    
+    /* Date and Series Wrappers */
+    #date {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    .wrap {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      background-color: #f9f9f9;
+    }
+    
+    .wrap:hover {
+      background-color: #e6f7ff;
+    }
+    
+    .wrapele {
+      font-size: 16px;
+      font-weight: bold;
+      white-space: nowrap; /* Ensure text stays in a single line */
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    
+    .wrapele2 {
+      font-size: 14px;
+      color: #555;
+    }
+    /* Match Container */
+    .match-container {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .match-container h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    
+    }
+    #matchSeries{
+      overflow: scroll;
+    }
+    .team-container {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+    }
+    #navname{
+        color: white;
+        font-weight: bold;
+        font-size: 1.2em;
+        text-decoration: none;
+      }
+    .team-container img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+    #navele>a{
+      color: white;
+      position: relative;
+      top: 20px;
+      background-color: #3b4d5b;
+      border-radius: 20px;
+      padding: 10px;
+    
+    }
+    .nav{
+      text-decoration: none;
+      color: white;
+      font-size: 0.9em;
+    }
+    .status {
+      color: green;
+    }
+    #heading {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #2c3e50;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    #squadType {
+      font-size: 1.2rem;
+      color: #34495e;
+      margin: 10px 0;
+      padding: 5px 15px;
+      border-radius: 8px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    #stats-heading {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #2c3e50;
+      margin-bottom: 15px;
+    }
+    #stats-heading:hover{
+      background-color: gray;;
+    }
+    .venue-container {
+      display: flex;
+      align-items: center;
+      margin: 15px 0;
+      padding: 15px;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Image styling */
+    .venue-image {
+      width: 50px;
+      height: 50px;
+      border-radius: 8px;
+      margin-right: 15px;
+      object-fit: cover;
+      border: 1px solid #ccc;
+    }
+    
+    /* Venue details styling */
+    .venue-details {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    /* Venue name (ground and city) */
+    [id^="venue-name-"] {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #2c3e50;
+      margin-bottom: 5px;
+    }
+    
+    /* Venue country */
+    [id^="venue-country-"] {
+      font-size: 1rem;
+      color: #34495e;
+    }
+    /* Container for each news story */
+    .news-container {
+      display: flex;
+      align-items: flex-start;
+      margin: 15px 0;
+      padding: 15px;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .news-image {
+      width: 50px;
+      height: 50px;
+      border-radius: 8px;
+      margin-right: 15px;
+      object-fit: cover;
+      border: 1px solid #ccc;
+    }
+    
+    /* News details styling */
+    .news-details {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    /* News headline styling */
+    [id^="news-headline-"] {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+    
+    /* News intro styling */
+    [id^="news-intro-"] {
+      font-size: 0.8rem;
+      color: #34495e;
+      line-height: 1.5;
+    }
+    #loading-message {
+      font-size: 1.2rem;
+      color: #2c3e50;
+      text-align: center;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin: 20px auto;
+      width: fit-content;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    
+    
+    
+    
+    
+}
+
+
